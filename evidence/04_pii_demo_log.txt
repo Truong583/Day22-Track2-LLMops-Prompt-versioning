@@ -1,0 +1,33 @@
+=======================================================
+  Step 4: Guardrails AI Validators
+============================================================
+
+=======================================================
+  [PII Detection Demo]
+=======================================================
+
+[Email]
+  Đầu vào: Liên hệ John tại john.doe@example.com để biết thêm.
+  Đầu ra:  Liên hệ John tại [EMAIL_REDACTED] để biết thêm.
+
+[Điện thoại]
+  Đầu vào: Số hỗ trợ khách hàng: (555) 867-5309.
+  Đầu ra:  Số hỗ trợ khách hàng: ([PHONE_REDACTED].
+
+[SSN]
+  Đầu vào: Số an sinh xã hội: 123-45-6789.
+  Đầu ra:  Số an sinh xã hội: [SSN_REDACTED].
+
+[Thẻ tín dụng]
+  Đầu vào: Thanh toán qua thẻ 4532 1234 5678 9010.
+  Đầu ra:  Thanh toán qua thẻ [CREDIT_CARD_REDACTED].
+
+[Hỗn hợp]
+  Đầu vào: Email: alice@web.com, SĐT: 555-123-4567
+  Đầu ra:  Email: [EMAIL_REDACTED], SĐT: [PHONE_REDACTED]
+
+[Sạch]
+  Đầu vào: Văn bản này không chứa thông tin nhạy cảm.
+  Đầu ra:  Văn bản này không chứa thông tin nhạy cảm.
+
+✅ Hoàn thành Nhiệm vụ 4!

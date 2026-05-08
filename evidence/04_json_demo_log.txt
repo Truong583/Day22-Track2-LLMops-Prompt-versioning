@@ -1,0 +1,40 @@
+=======================================================
+  Step 4: Guardrails AI Validators
+============================================================
+
+=======================================================
+  [JSON Formatting Demo]
+=======================================================
+
+[Hợp lệ] ✅ Hợp lệ/Đã sửa
+  Đầu vào: {"name": "Alice", "age": 30}
+  Đầu ra:  {"name": "Alice", "age": 30}
+
+[Có Markdown] ✅ Hợp lệ/Đã sửa
+  Đầu vào: ```json
+{"name": "Bob"}
+```
+  Đầu ra:  {
+  "name": "Bob"
+}
+  🔧 Đã tự động sửa lỗi JSON thành công.
+
+[Dùng nháy đơn] ✅ Hợp lệ/Đã sửa
+  Đầu vào: {'name': 'Charlie', 'score': 95}
+  Đầu ra:  {
+  "name": "Charlie",
+  "score": 95
+}
+  🔧 Đã tự động sửa lỗi JSON thành công.
+
+[Dấu phẩy thừa] ✅ Hợp lệ/Đã sửa
+  Đầu vào: {"key": "value",}
+  Đầu ra:  {
+  "key": "value"
+}
+
+[Bị hỏng nặng] ✅ Hợp lệ/Đã sửa
+  Đầu vào: Đây không phải JSON: {abc]
+  Đầu ra:  {"error": "Không thể phục hồi JSON", "raw": "Đây không phải JSON: {abc]"}
+
+✅ Hoàn thành Nhiệm vụ 4!
